@@ -46,26 +46,32 @@ void Archivo::lectura() {
 	archivo.close(); // Cerramos el archivo
 }
 
-void Archivo::anadir(string nombre, string edad, string Carnet_identidad, string nacionalidad) {
+void Archivo::anadir(string rol_en_la_empresa, string nombre, string edad, string Carnet_identidad, string nacionalidad, string Ocupacion, string Horas_trabajadas_mes, string Salario, string fecha_de_vinculacion, string fecha_de_retiro, string producto_de_cocecha, string extra) {
 	ofstream archivo;
 	string texto;
-	archivo.open("programacion.txt", ios::app); // Actualizar
-
-	if (archivo.fail())
+	
+	if (rol_en_la_empresa == "agricultor")
 	{
-		cout << "No se pudo abrir el archivo";
-		exit(1);
-	}
+		archivo.open("BaseDeDatos/agricultores.txt", ios::app); // Actualizar
 
-	//archivo << endl;
-	//cout << "Digite el texto que quiere anadir: ";
-	//getline(cin, texto);
-	//archivo << texto << endl;
-	//archivo << "Hola que tal? ";
-	archivo << "Nombre: " << nombre << endl;
-	archivo << "Edad: " << edad << endl;
-	archivo << "Carnet de identidad: " << Carnet_identidad << endl;
-	archivo << "Nacionalidad: " << nacionalidad << endl;
+		if (archivo.fail())
+		{
+			cout << "No se pudo abrir el archivo";
+			exit(1);
+		}
+		archivo << "Nombre: " << nombre << endl;
+		archivo << "Edad: " << edad << endl;
+		archivo << "Carnet de identidad: " << Carnet_identidad << endl;
+		archivo << "Nacionalidad: " << nacionalidad << endl;
+		archivo << "Ocupacion: " << endl;
+		archivo << "Horas de trabajo por mes: " << Horas_trabajadas_mes << endl;
+		archivo << "Salario: " << Salario << endl;
+		archivo << "Fecha de vinculacion: " << fecha_de_vinculacion << endl;
+		archivo << "Fecha de retiro: " << fecha_de_retiro << endl;
+		archivo << "Producto de cocecha: " << producto_de_cocecha << endl;
+	}
+	
+
 	archivo.close();
 }
 

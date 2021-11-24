@@ -12,7 +12,7 @@ using namespace std;
 int main()
 {
 
-	Persona persona;
+	Agricultor agricultor;
 	int op1;
 	bool salir = true;
 
@@ -40,15 +40,30 @@ int main()
 			case 1:
 				break;
 			case 2:
-				persona.set_nombre("Eduardo");
-				persona.set_edad("20");
-				persona.set_Carnet_identidad("7788781");
-				persona.set_nacionalidad("boliviano");
-				persona.anadir(
-					persona.get_nombre(),
-					persona.get_edad(),
-					persona.get_Carnet_identidad(),
-					persona.get_nacionalidad()
+				
+				agricultor.set_nombre("Eduardo");
+				agricultor.set_edad("20");
+				agricultor.set_Carnet_identidad("7788781");
+				agricultor.set_nacionalidad("Boliviano");
+				agricultor.set_ocupacion("Plantacion");
+				agricultor.set_Horas_trabajadas_mes("200 hrs");
+				agricultor.set_Salario("2100 bs");
+				agricultor.set_fecha_de_vinculacion("10/08/01");
+				agricultor.set_fecha_de_retiro("24/11/21");
+				agricultor.set_producto_de_cocecha("Maiz");
+				agricultor.anadir(
+					"agricultor",
+					agricultor.get_nombre(),
+					agricultor.get_edad(),
+					agricultor.get_Carnet_identidad(),
+					agricultor.get_nacionalidad(),
+					agricultor.get_ocupacion(),
+					agricultor.get_Horas_trabajadas_mes(),
+					agricultor.get_Salario(),
+					agricultor.get_fecha_de_vinculacion(),
+					agricultor.get_fecha_de_retiro(),
+					agricultor.get_producto_de_cocecha(),
+					"NULL"
 				);
 				break;
 			default:

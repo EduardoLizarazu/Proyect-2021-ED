@@ -11,7 +11,15 @@ public:
 	Archivo();
 	void escribir();
 	void lectura();
-	void anadir(string, string, string, string);
+	void anadir(
+		string, string, // 1
+		string, string, // 2
+		string, string, // 3
+		string, string, // 4
+		string, string, // 5
+		string, string, // 6
+		string // 7
+	);
 	void bajaLogica();
 };
 
