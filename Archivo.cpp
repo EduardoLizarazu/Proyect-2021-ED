@@ -91,6 +91,25 @@ void Archivo::anadir(string rol_en_la_empresa, string nombre, string edad, strin
 		archivo << "Productos vendidos: " << nombre_producto_vendido << endl;
 		archivo << "Total de producto vendidos: " << total_productos_vendidos << endl;
 	}
+	else if (rol_en_la_empresa == "cliente") 
+	{
+		archivo.open("BaseDeDatos/cliente.txt", ios::app); // Actualizar
+
+		if (archivo.fail())
+		{
+			cout << "No se pudo abrir el archivo";
+			exit(1);
+		}
+		archivo << "Nombre: " << nombre << endl;
+		archivo << "Edad: " << edad << endl;
+		archivo << "Carnet de identidad: " << Carnet_identidad << endl;
+		archivo << "Nacionalidad: " << nacionalidad << endl;
+		archivo << "Nivel de satisfaccion: " << satisfaccion << endl;
+	}
+	else
+	{
+		cout << "ERROR AL SELECCIONAR ROL DE LA EMPRESA" << endl;
+	}
 	
 
 	archivo.close();
