@@ -33,6 +33,7 @@ int main()
 			cout << "Ingrese una de las opciones: " << endl;
 			cout << "1. Leer " << endl;
 			cout << "5. A�adir" << endl;
+			cout << "6. Eliminar" << endl;
 			cin >> op3;
 			switch (op3)
 			{
@@ -74,6 +75,8 @@ int main()
 				);
 				cout << "DATOS INGRESADOS!" << endl;
 				break;
+			case 6:
+				cliente.bajaLogica("cliente");
 				break;
 			case 2: // Agricultor
 				int op2;
@@ -142,7 +145,7 @@ int main()
 				int op3;
 				cout << "Ingrese una de las opciones: " << endl;
 				cout << "1. Leer " << endl;
-				cout << "2. A�adir" << endl;
+				cout << "2. A�adir" << endl; 
 				cin >> op3;
 				switch (op3)
 				{

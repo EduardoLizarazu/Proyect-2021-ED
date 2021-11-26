@@ -20,6 +20,6 @@ public:
 		string, string, // 6
 		string, string // 7
 	);
-	void bajaLogica();
+	void bajaLogica(string);
 };
 

@@ -154,52 +154,68 @@ void Archivo::anadir(string rol_en_la_empresa, string nombre, string edad, strin
 	archivo.close();
 }
 
-void Archivo::bajaLogica() {
-	char nombre[20], profesion[20];
-	int edad;
-
-	ifstream salida;
-	salida.open("empleados.txt", ios::in);
-
-	ofstream entrada;
-	entrada.open("temp.txt", ios::out);
-
-	if (salida.fail())
+void Archivo::bajaLogica(string rol_empresa) {
+	if (rol_empresa == "cliente")
 	{
-		cout << "No se pudo abrir el archivo";
-		exit(1);
+		char nombre[20], edad[20], carnet[20], nacionalidad[20], satisfaccion[20];
+		char nombre_r[20], edad_r[20], carnet_r[20], nacionalidad_r[20], satisfaccion_r[20];
+		//int edad;
+
+		ifstream salida;
+		salida.open("BaseDeDatos/empleados.txt", ios::in);
+
+		ofstream entrada;
+		entrada.open("BaseDeDatos/temp.txt", ios::out);
+
+		if (salida.fail())
+		{
+			cout << "No se pudo abrir el archivo";
+			exit(1);
+		}
+		else
+		{
+			char aux[20];
+
+			cout << "Introduce el nombre: ";
+			cin >> aux;
+
+			salida >> nombre;
+
+			while (!salida.eof())
+			{
+				salida >> edad >> edad;
+
+				if (strcmp(aux, nombre) == 0)
+				{
+					cout << "El registro se ha eliminado" << endl;
+					//exit(1);
+				}
+				else
+				{
+					entrada << nombre << " " << edad << " " << edad << endl;
+				}
+
+				salida >> nombre;
+			}
+
+			entrada.close();
+			salida.close();
+
+			remove("BaseDeDatos/empleados.txt");
+			rename("BaseDeDatos/temp.txt", "BaseDeDatos/empleados.txt");
+		}
+	}
+	else if (rol_empresa == "agricultor")
+	{
+
+	}
+	else if (rol_empresa == "vendedor")
+	{
+
 	}
 	else
 	{
-		char aux[20];
-		cout << "Introduce el nombre: ";
-		cin >> aux;
-
-		salida >> nombre; // empleados lectura
-		cout << "1. Salida: " << nombre << endl;
-
-		while (!salida.eof())
-		{
-			salida >> edad >> profesion; // empleados lectura
-			cout << "2. salida: " << nombre << edad << profesion << endl;
-
-			if (strcmp(aux, nombre) == 0) // si coincide regresa null
-			{
-				cout << "El registro se ha eliminado";
-				//getch();
-			}
-			else
-			{
-				entrada << nombre << " " << edad << " " << profesion << endl; // Escribiendo
-				cout << "3. Entrada: " << nombre << " " << edad << " " << profesion << endl;
-			}
-			salida >> nombre;// empleados lectura
-			cout << "4. salida: " << nombre;
-		}
-
-		entrada.close();
-		salida.close();
-		remove("empleados.txt");
-		rename("temp.txt", "empleados.txt");
+		cout << "ERROR AL SELECCIONA ROL EN LA EMPRESA" << endl;
 	}
+
 }
