@@ -10,7 +10,7 @@ private:
 public:
 	Archivo();
 	void escribir();
-	void lectura();
+	void lectura(string);
 	void anadir(
 		string, string, // 1
 		string, string, // 2

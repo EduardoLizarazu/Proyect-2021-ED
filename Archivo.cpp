@@ -25,23 +25,62 @@ void Archivo::escribir() {
 	archivo.close(); // Cerrar el archivo
 }
 
-void Archivo::lectura() {
+void Archivo::lectura(string rol_empresa) {
 	ifstream archivo; // Lectura
 	string texto;
-
-	archivo.open("programacion.txt", ios::in); // Lectura
-
-	if (archivo.fail())
+	if (rol_empresa == "agricultor")
 	{
-		cout << "No se pudo abrir el archivo";
-		exit(1);
-	}
+		archivo.open("BaseDeDatos/agricultor.txt", ios::in); // Lectura
 
-	while (!archivo.eof()) // mientras no se el final del archivo
-	{
-		getline(archivo, texto); // copiamos que encontremos en el archivo
-		cout << texto << endl;
+		if (archivo.fail())
+		{
+			cout << "No se pudo abrir el archivo";
+			exit(1);
+		}
+
+		while (!archivo.eof()) // mientras no se el final del archivo
+		{
+			getline(archivo, texto); // copiamos que encontremos en el archivo
+			cout << texto << endl;
+		}
 	}
+	else if (rol_empresa == "vendedor")
+	{
+		archivo.open("BaseDeDatos/vendedor.txt", ios::in); // Lectura
+
+		if (archivo.fail())
+		{
+			cout << "No se pudo abrir el archivo";
+			exit(1);
+		}
+
+		while (!archivo.eof()) // mientras no se el final del archivo
+		{
+			getline(archivo, texto); // copiamos que encontremos en el archivo
+			cout << texto << endl;
+		}
+	}
+	else if (rol_empresa == "cliente")
+	{
+		archivo.open("BaseDeDatos/cliente.txt", ios::in); // Lectura
+
+		if (archivo.fail())
+		{
+			cout << "No se pudo abrir el archivo";
+			exit(1);
+		}
+
+		while (!archivo.eof()) // mientras no se el final del archivo
+		{
+			getline(archivo, texto); // copiamos que encontremos en el archivo
+			cout << texto << endl;
+		}
+	}
+	else
+	{
+		cout << "ERROR EN SELECCIONAR ROL DE LA EMPRESA!" << endl;
+	}
+	
 
 	archivo.close(); // Cerramos el archivo
 }

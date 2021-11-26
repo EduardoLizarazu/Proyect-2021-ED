@@ -33,11 +33,11 @@ int main()
 			cout << "Ingrese una de las opciones: " << endl;
 			cout << "1. Leer " << endl;
 			cout << "5. A�adir" << endl;
-			cout << "0. Salir " << endl;
 			cin >> op3;
 			switch (op3)
 			{
 			case 1:
+				cliente.lectura("cliente");
 				break;
 			case 5:
 				cout << "Ingrese nombre: ";
@@ -80,11 +80,11 @@ int main()
 				cout << "Ingrese una de las opciones: " << endl;
 				cout << "1. Leer " << endl;
 				cout << "2. A�adir" << endl;
-				cout << "0. Salir " << endl;
 				cin >> op2;
 				switch (op2)
 				{
 				case 1:
+					agricultor.lectura("agricultor");
 					break;
 				case 2:
 					cout << "Ingrese nombre: ";
@@ -143,11 +143,11 @@ int main()
 				cout << "Ingrese una de las opciones: " << endl;
 				cout << "1. Leer " << endl;
 				cout << "2. A�adir" << endl;
-				cout << "0. Salir " << endl;
 				cin >> op3;
 				switch (op3)
 				{
 				case 1:
+					vendedor.lectura("vendedor");
 					break;
 				case 2:
 					cout << "Ingrese nombre: ";
