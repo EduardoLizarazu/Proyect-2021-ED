@@ -46,7 +46,7 @@ void Archivo::lectura() {
 	archivo.close(); // Cerramos el archivo
 }
 
-void Archivo::anadir(string rol_en_la_empresa, string nombre, string edad, string Carnet_identidad, string nacionalidad, string Ocupacion, string Horas_trabajadas_mes, string Salario, string fecha_de_vinculacion, string fecha_de_retiro, string producto_de_cocecha, string extra) {
+void Archivo::anadir(string rol_en_la_empresa, string nombre, string edad, string Carnet_identidad, string nacionalidad, string Ocupacion, string Horas_trabajadas_mes, string Salario, string fecha_de_vinculacion, string fecha_de_retiro, string producto_de_cocecha, string nombre_producto_vendido, string total_productos_vendidos, string satisfaccion) {
 	ofstream archivo;
 	string texto;
 	
@@ -69,6 +69,27 @@ void Archivo::anadir(string rol_en_la_empresa, string nombre, string edad, strin
 		archivo << "Fecha de vinculacion: " << fecha_de_vinculacion << endl;
 		archivo << "Fecha de retiro: " << fecha_de_retiro << endl;
 		archivo << "Producto de cocecha: " << producto_de_cocecha << endl;
+	}
+	else if (rol_en_la_empresa == "vendedor")
+	{
+		archivo.open("BaseDeDatos/vendedor.txt", ios::app); // Actualizar
+
+		if (archivo.fail())
+		{
+			cout << "No se pudo abrir el archivo";
+			exit(1);
+		}
+		archivo << "Nombre: " << nombre << endl;
+		archivo << "Edad: " << edad << endl;
+		archivo << "Carnet de identidad: " << Carnet_identidad << endl;
+		archivo << "Nacionalidad: " << nacionalidad << endl;
+		archivo << "Ocupacion: " << endl;
+		archivo << "Horas de trabajo por mes: " << Horas_trabajadas_mes << endl;
+		archivo << "Salario: " << Salario << endl;
+		archivo << "Fecha de vinculacion: " << fecha_de_vinculacion << endl;
+		archivo << "Fecha de retiro: " << fecha_de_retiro << endl;
+		archivo << "Productos vendidos: " << nombre_producto_vendido << endl;
+		archivo << "Total de producto vendidos: " << total_productos_vendidos << endl;
 	}
 	
 

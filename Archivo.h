@@ -18,7 +18,7 @@ public:
 		string, string, // 4
 		string, string, // 5
 		string, string, // 6
-		string // 7
+		string, string // 7
 	);
 	void bajaLogica();
 };
