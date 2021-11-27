@@ -98,16 +98,22 @@ void Archivo::anadir(string rol_en_la_empresa, string nombre, string edad, strin
 			cout << "No se pudo abrir el archivo";
 			exit(1);
 		}
+		
+		archivo << nombre << " " << edad << " " << Carnet_identidad << " " << nacionalidad << " " << Ocupacion << " " << Horas_trabajadas_mes << " " << Salario << " " << fecha_de_vinculacion << " " << fecha_de_vinculacion << producto_de_cocecha << endl;
+		
+		/*
 		archivo << "Nombre: " << nombre << endl;
 		archivo << "Edad: " << edad << endl;
 		archivo << "Carnet de identidad: " << Carnet_identidad << endl;
 		archivo << "Nacionalidad: " << nacionalidad << endl;
-		archivo << "Ocupacion: " << endl;
+		archivo << "Ocupacion: " << Ocupacion << endl;
 		archivo << "Horas de trabajo por mes: " << Horas_trabajadas_mes << endl;
 		archivo << "Salario: " << Salario << endl;
 		archivo << "Fecha de vinculacion: " << fecha_de_vinculacion << endl;
-		archivo << "Fecha de retiro: " << fecha_de_retiro << endl;
+		archivo << "Fecha de retiro: " << fecha_de_vinculacion << endl;
 		archivo << "Producto de cocecha: " << producto_de_cocecha << endl;
+		*/
+		
 	}
 	else if (rol_en_la_empresa == "vendedor")
 	{
@@ -155,14 +161,14 @@ void Archivo::anadir(string rol_en_la_empresa, string nombre, string edad, strin
 }
 
 void Archivo::bajaLogica(string rol_empresa) {
+	
+	char nombre[20], carnet[20], nacionalidad[20], satisfaccion[20], ocupacion[20], Horas_trabajadas_mes[20], Salario[20], fecha_de_vinculacion[20], fecha_de_retiro[20], producto_de_cocecha[20];
+	int edad;
+
 	if (rol_empresa == "cliente")
 	{
-		char nombre[20], edad[20], carnet[20], nacionalidad[20], satisfaccion[20];
-		char nombre_r[20], edad_r[20], carnet_r[20], nacionalidad_r[20], satisfaccion_r[20];
-		//int edad;
-
 		ifstream salida;
-		salida.open("BaseDeDatos/empleados.txt", ios::in);
+		salida.open("BaseDeDatos/cliente.txt", ios::in);
 
 		ofstream entrada;
 		entrada.open("BaseDeDatos/temp.txt", ios::out);
@@ -170,7 +176,7 @@ void Archivo::bajaLogica(string rol_empresa) {
 		if (salida.fail())
 		{
 			cout << "No se pudo abrir el archivo";
-			exit(1);
+			//exit(1);
 		}
 		else
 		{
@@ -180,10 +186,10 @@ void Archivo::bajaLogica(string rol_empresa) {
 			cin >> aux;
 
 			salida >> nombre;
-
+			//cout << "1. "<<nombre <<endl;
 			while (!salida.eof())
 			{
-				salida >> edad >> edad;
+				salida >> edad >> carnet >> nacionalidad >> Horas_trabajadas_mes >> Salario >> fecha_de_vinculacion >> fecha_de_retiro >> producto_de_cocecha;
 
 				if (strcmp(aux, nombre) == 0)
 				{
@@ -192,7 +198,7 @@ void Archivo::bajaLogica(string rol_empresa) {
 				}
 				else
 				{
-					entrada << nombre << " " << edad << " " << edad << endl;
+					entrada << nombre << " " << edad << " " << carnet << " " << nacionalidad << Horas_trabajadas_mes<< " " << Salario << " " << fecha_de_vinculacion << " " << fecha_de_retiro << " " << producto_de_cocecha << endl;
 				}
 
 				salida >> nombre;
@@ -201,8 +207,8 @@ void Archivo::bajaLogica(string rol_empresa) {
 			entrada.close();
 			salida.close();
 
-			remove("BaseDeDatos/empleados.txt");
-			rename("BaseDeDatos/temp.txt", "BaseDeDatos/empleados.txt");
+			remove("BaseDeDatos/cliente.txt");
+			rename("BaseDeDatos/temp.txt", "BaseDeDatos/cliente.txt");
 		}
 	}
 	else if (rol_empresa == "agricultor")
