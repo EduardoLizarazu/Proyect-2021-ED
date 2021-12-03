@@ -3,6 +3,8 @@
     --alter-color: #333;
     --primary-bg: #191A19;
     --second-bg: #1E5128;
+    --thirth-bg: #4E9F3D;
+    --fourth-bg: #D8E9A8;
     --Font-1: 'Lora', serif;
     --Font-2: 'Lora', serif;
     --Font-special: 'Comforter', cursive;
@@ -119,8 +121,21 @@ main img {
 }
 main .start-button-container {
     position: absolute;
-    display: flex;
     z-index: 100;
+    top: 40%;
+    left: calc(50% - 50px);
 }
 main .start-button {
+    padding: 15px 30px;
+    background-color: var(--second-bg);
+    
+}
+main .start-button:hover {
+    outline: 3px solid #fff;
+}
+main .start-button a {
+    color: #fff;
+    font-family: var(--Font-1);
+    font-size: 2rem;
+    font-weight: bold;
 }
