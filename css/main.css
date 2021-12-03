@@ -1,0 +1,126 @@
+:root {
+    --primary-color: #fff;
+    --alter-color: #333;
+    --primary-bg: #191A19;
+    --second-bg: #1E5128;
+    --Font-1: 'Lora', serif;
+    --Font-2: 'Lora', serif;
+    --Font-special: 'Comforter', cursive;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+/* HEADER */
+header {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--primary-bg);
+    height: 75px;
+}
+header .root-icon {
+    grid-area: 1 / 1 / 2 / 2;
+    height: 35px;
+    width: 35px;
+    background-image: url("../assets/svg/farm.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header h1 {
+    grid-area: 1 / 2 / 2 / 3;
+    color: var(--primary-color);
+    font-family: var(--Font-1);
+    font-size: 2.5rem;
+}
+
+/* NAVBAR-SIDE */
+nav {
+    grid-area: 1 / 3 / 2 / 4;
+    justify-self: baseline;
+}
+nav .nav-container {
+    position: fixed;
+    z-index: 50;
+    top: 120px;
+    height: 500px;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #555;
+    border-radius: 15px;
+    transform: translate(70px ,0);
+    transition: all .5s ease-in-out;
+}
+nav .nav-container:hover {
+    transform: translateX(0px);
+}
+
+/* NAVBAR-ICON */
+
+nav .nav-container .nav-icon-container a {
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+nav .nav-container .nav-icon-container a:hover {
+    box-shadow: 0px 3px 10px 2px rgba(255, 255, 255, 0.88);
+}
+.facebook a {
+    background-image: url("../assets/svg/facebook.png");
+}
+.instagram a {
+    background-image: url("../assets/svg/instagram.png");
+}
+.linkedin a {
+    background-image: url("../assets/svg/linkedin.png");
+}
+.github a {
+    background-image: url("../assets/svg/github.png");
+}
+
+/* MAIN */
+main {
+    position: relative;
+    width: 100%;
+    height: 91.1vh;
+}
+main img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 57% 0%;
+    object-position: 66% 0%;
+}
+main .start-button-container {
+    position: absolute;
+    display: flex;
+    z-index: 100;
+}
+main .start-button {
+}
