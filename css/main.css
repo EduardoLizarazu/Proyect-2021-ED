@@ -65,7 +65,7 @@ nav {
 
 nav .nav-container {
     position: fixed;
-    z-index: 50;
+    z-index: 500;
     top: 120px;
     height: 500px;
     width: 70px;
@@ -177,5 +177,17 @@ main .login-form h2 {
     font-family: var(--Font-2);
     font-size: 1.5rem;
     font-weight: 300;
+}
+.login-form .submit-button {
+    padding: 10px 100px;
+    margin: 10px 0;
+    background-color: var(--thirth-bg);
+    border-radius: 50px;
+    border: none;
+    font-family: var(--Font-2);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--primary-color);
+
 }
 
