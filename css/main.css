@@ -29,6 +29,9 @@ li {
 input:focus {
     outline: none;
 }
+button {
+    border: none;
+}
 /* HEADER */
 header {
     position: relative;
@@ -188,6 +191,15 @@ main .login-form h2 {
     font-size: 1.5rem;
     font-weight: 300;
     color: var(--primary-color);
-
 }
+.login-form .login-register-button {
+    margin: 10px 0;
+    background-color: transparent;
+    font-weight: var(--Font-2);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
 
