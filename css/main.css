@@ -169,7 +169,7 @@ main .login-form h2 {
 }
 .login-form .form-input input {
     margin: 10px 0;
-    padding: 10px 25px;
+    padding: 13px 35px;
     border-radius: 50px;
     background-color: transparent;
     border: 1px solid #fff;
@@ -182,7 +182,7 @@ main .login-form h2 {
     font-weight: 300;
 }
 .login-form .submit-button {
-    padding: 10px 100px;
+    padding: 13px 103px;
     margin: 10px 0;
     background-color: var(--thirth-bg);
     border-radius: 50px;
