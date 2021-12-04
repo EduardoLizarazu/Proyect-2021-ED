@@ -109,6 +109,9 @@ nav .nav-container .nav-icon-container a:hover {
 /* MAIN */
 main {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 91.1vh;
 }
@@ -119,6 +122,8 @@ main img {
     object-fit: cover;
     object-position: 57% 0%;
     object-position: 66% 0%;
+    /* FORM */
+    filter: blur(3px);
 }
 main .start-button-container {
     position: absolute;
@@ -143,9 +148,17 @@ main .start-button a {
     font-weight: bold;
 }
 
+/* FORM LOGIN */
 main .login-form {
-    display: flex;
-    flex-direction: column;
     position: absolute;
     z-index: 100;
-} 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .login-form h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+}
+
