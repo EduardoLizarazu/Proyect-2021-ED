@@ -71,10 +71,15 @@ function displayFormOpacityOn () {
         } else {
             pos += .2;
             getLoginForm.style.opacity = `${pos}`;
-            console.log(pos);
+            // console.log(pos);
         }
     }
 }
+// ARROW VISIBILITY
+getButtonStart.addEventListener("click", () => {
+    const getBackArrow = document.getElementById("backArrow");
+    getBackArrow.style.visibility = "visible";
+});
 
 
 

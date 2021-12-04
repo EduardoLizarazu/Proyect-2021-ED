@@ -144,6 +144,7 @@ main .back-arrow {
     background-position: center;
     background-repeat: no-repeat;
     transform: scaleX(-1);
+    visibility: hidden;
 }
 main .back-arrow a {
     padding: 30px;
