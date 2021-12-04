@@ -182,6 +182,9 @@ main .login-form {
     flex-direction: column;
     align-items: center;
     margin-bottom: 45px;
+    /* ON INDEX */
+    visibility: hidden;
+    opacity: 0;
 }
 main .login-form h2 {
     margin-bottom: 20px;

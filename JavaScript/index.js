@@ -57,5 +57,24 @@ function hiddenButtonStart () {
     getButtonStart.style.visibility = "hidden";
 }
 
+// OPACITY FORM
+getButtonStart.addEventListener("click", displayFormOpacityOn);
+function displayFormOpacityOn () {
+    const getLoginForm = document.getElementById("login-form");
+    getLoginForm.style.visibility = "visible";
+    let id = null;
+    let pos = 0;
+    id = setInterval(frame, 50);
+    function frame () {
+        if (pos == 1) {
+            clearInterval(id);
+        } else {
+            pos += .2;
+            getLoginForm.style.opacity = `${pos}`;
+            console.log(pos);
+        }
+    }
+}
+
 
 
