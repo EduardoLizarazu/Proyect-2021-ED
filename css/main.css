@@ -129,7 +129,7 @@ main img {
     object-position: 57% 0%;
     object-position: 66% 0%;
     /* FORM */
-    filter: blur(3px);
+    filter: blur(10px);
 }
 main .start-button-container {
     position: absolute;
@@ -161,6 +161,7 @@ main .login-form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 45px;
 }
 main .login-form h2 {
     margin-bottom: 20px;
