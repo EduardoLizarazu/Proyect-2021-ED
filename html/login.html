@@ -25,20 +25,25 @@
     </header>
     <main id="main">
         <img src="../assets/img/Lassa.jpg" alt="farm">
-        <div class="back-arrow"><a href="../index.html"></a></div>
-        <form class="login-form">
+
+        <div class="back-arrow" id="backArrow"><a href="../index.html"></a></div>
+
+        <form class="login-form" name="login-form" id="login-form">
             <h2>Wellcome</h2>
+            <div id="adding"></div>
             <label class="form-input">
-                <input type="email" placeholder="Email Address">
+                <input type="email" placeholder="Email Address" name="fname">
             </label>
             <label class="form-input">
-                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Password" name="fpassword">
             </label>
             <button type="submit" class="submit-button">Login</button>
             <button class="login-register-button">Register</button>
         </form>
+
     </main>
 
-    <script src="../JavaScript/index.js"></script>
+    <!-- <script src="../JavaScript/index.js"></script> -->
+    <script src="../JavaScript/login.js"></script>
 </body>
 </html>
