@@ -6,7 +6,7 @@
     --thirth-bg: #4E9F3D;
     --fourth-bg: #D8E9A8;
     --Font-1: 'Lora', serif;
-    --Font-2: 'Lora', serif;
+    --Font-2: 'Roboto', sans-serif;
     --Font-special: 'Comforter', cursive;
 }
 
@@ -25,6 +25,9 @@ a {
 }
 li {
     list-style: none;
+}
+input:focus {
+    outline: none;
 }
 /* HEADER */
 header {
@@ -160,5 +163,19 @@ main .login-form h2 {
     text-align: center;
     font-size: 3.5rem;
     color: var(--primary-color);
+}
+.login-form .form-input input {
+    margin: 10px 0;
+    padding: 10px 25px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+.login-form .form-input input::placeholder {
+    color: var(--primary-color);
+    text-align: center;
+    font-family: var(--Font-2);
+    font-size: 1.5rem;
+    font-weight: 300;
 }
 
