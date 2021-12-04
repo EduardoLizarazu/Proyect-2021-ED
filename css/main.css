@@ -145,6 +145,9 @@ main .back-arrow {
     background-repeat: no-repeat;
     transform: scaleX(-1);
 }
+main .back-arrow a {
+    padding: 30px;
+}
 main .start-button-container {
     position: absolute;
     z-index: 100;
