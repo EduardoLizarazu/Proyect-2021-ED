@@ -130,7 +130,7 @@ main img {
     object-position: 57% 0%;
     object-position: 66% 0%;
     /* FORM */
-    filter: blur(10px);
+    /* filter: blur(10px); */
 }
 main .back-arrow {
     position: absolute;
@@ -155,16 +155,19 @@ main .start-button-container {
     left: calc(50% - 50px);
 }
 main .start-button {
-    padding: 15px 30px;
     background-color: var(--second-bg);
-    transform:  translateY(0);
-    transition: all .2s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 main .start-button:hover {
     outline: 3px solid #fff;
 } 
-
+main .start-button:focus-within {
+    opacity: 0;
+    transform: scale(.5);
+}
 main .start-button a {
+    display: inline-block;
+    padding: 15px 30px;
     color: #fff;
     font-family: var(--Font-1);
     font-size: 2rem;
