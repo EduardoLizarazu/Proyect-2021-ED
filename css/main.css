@@ -163,7 +163,7 @@ main .start-button:hover {
 } 
 main .start-button:focus-within {
     opacity: 0;
-    transform: scale(.5);
+    /* transform: scale(.5); */
 }
 main .start-button a {
     display: inline-block;
