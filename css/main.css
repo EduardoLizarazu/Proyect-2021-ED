@@ -129,11 +129,13 @@ main .start-button-container {
 main .start-button {
     padding: 15px 30px;
     background-color: var(--second-bg);
-    
+    transform:  translateY(0);
+    transition: all .2s ease-in-out;
 }
 main .start-button:hover {
     outline: 3px solid #fff;
-}
+} 
+
 main .start-button a {
     color: #fff;
     font-family: var(--Font-1);
