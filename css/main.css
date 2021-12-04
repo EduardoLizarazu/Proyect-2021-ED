@@ -163,8 +163,9 @@ main .login-form {
     align-items: center;
 }
 main .login-form h2 {
+    margin-bottom: 20px;
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 5rem;
     color: var(--primary-color);
 }
 .login-form .form-input input {
