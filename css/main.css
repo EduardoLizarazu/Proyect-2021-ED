@@ -57,13 +57,14 @@ header h1 {
     grid-area: 1 / 2 / 2 / 3;
     color: var(--primary-color);
     font-family: var(--Font-1);
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 /* NAVBAR-SIDE */
 nav {
     grid-area: 1 / 3 / 2 / 4;
     justify-self: baseline;
+    visibility: hidden;
 }
 
 nav .nav-container {
@@ -130,6 +131,19 @@ main img {
     object-position: 66% 0%;
     /* FORM */
     filter: blur(10px);
+}
+main .back-arrow {
+    position: absolute;
+    z-index: 100;
+    top: 30px;
+    left: 30px;
+    height: 30px;
+    width: 30px;
+    background-image: url("../assets/svg/right-arrow.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
 }
 main .start-button-container {
     position: absolute;
