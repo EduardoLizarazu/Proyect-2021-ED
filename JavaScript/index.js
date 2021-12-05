@@ -81,5 +81,18 @@ getButtonStart.addEventListener("click", () => {
     getBackArrow.style.visibility = "visible";
 });
 
-
+// SCALE FORM
+getButtonStart.addEventListener("click", () => {
+    let id = null;
+    let pos = 0;
+    id = setInterval(frame, 45);
+    function frame () {
+        if (pos == 1) {
+            clearInterval(id);
+        } else {
+            pos += .2;
+            document.getElementById("login-form").style.transform = `scale(${pos})`;
+        }
+    }
+});
 

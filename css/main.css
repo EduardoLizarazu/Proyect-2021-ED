@@ -186,6 +186,7 @@ main .login-form {
     /* ON INDEX */
     visibility: hidden;
     opacity: 0;
+    transform: scale(.5);
 }
 main .login-form h2 {
     margin-bottom: 20px;
