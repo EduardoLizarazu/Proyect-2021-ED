@@ -1,0 +1,22 @@
+Nombre: eduardo
+Edad: 18
+Carnet de identidad: 77883
+Nacionalidad: boliv
+Ocupacion: 
+Horas de trabajo por mes: 33hrs
+Salario: 1833dolares
+Fecha de vinculacion: 3233
+Fecha de retiro: 10agosto
+Producto de cocecha: verduras
+Nombre: edua
+Edad: 23
+Carnet de identidad: 434343
+Nacionalidad: bolv
+Ocupacion: 
+Horas de trabajo por mes: 18hrs
+Salario: 18dolares
+Fecha de vinculacion: 10agosto
+Fecha de retiro: 10agos
+Producto de cocecha: hojas
+eduardo 18 7788781 boliv cocechador 3000hrs 1800dolares 10agosto 10agostoplatano
+Jose 33 7788781 boliv Agriculto 1000hors 3000bolivianos 10agosto 10agostomaiz

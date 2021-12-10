@@ -1,0 +1,4 @@
+maria 21 diseñadora
+jose 18 arquitecto
+julia 22 analista
+eduardo 20 developer
