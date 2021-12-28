@@ -1,7 +1,7 @@
 #pragma once
 #include "Nodo_Persona.h"
 class Empleado : public Nodo_Persona
-
+//Este es el Nodo persona
 {
 private:
 	string Ocupacion;
