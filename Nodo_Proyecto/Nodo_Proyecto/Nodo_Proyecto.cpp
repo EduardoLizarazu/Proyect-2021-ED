@@ -10,7 +10,7 @@ using namespace std;
 
 void main()
 {
-	cout<<"Principal"<<endl;
+	cout<<"  Principal  "<<endl;
 	getch();
 }
 
